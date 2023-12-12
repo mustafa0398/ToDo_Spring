@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="bootstrap-icons-1.10.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/bootstrap-icons-1.10.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="jar://$PROJECT_DIR$/lib/bootstrap-icons-1.10.2.jar!/" recursive="false" />
+  </library>
+</component>

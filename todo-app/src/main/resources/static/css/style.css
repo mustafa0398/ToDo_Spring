@@ -1,0 +1,179 @@
+.container {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: flex-start;
+    gap: 20px; /* Add some space between the children */
+    margin-top: 20px; /* Give some space from the top */
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* This separates the description and the buttons */
+    padding: 10px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(160deg, #8e9eab, #eef2f3);
+    color: #333;
+    font-size: 16px;
+    overflow: hidden; /* Prevents content from spilling out */
+}
+
+.task-complete {
+    background: linear-gradient(160deg, #a7ff83, #17b978); /* Adjust the colors for complete tasks */
+}
+
+.task-incomplete {
+    background: linear-gradient(160deg, #feff9c, #f83600); /* Adjust the colors for incomplete tasks */
+}
+
+.task-action {
+    margin-left: 10px;
+    display: flex; /* Aligns the buttons in a flex container */
+    align-items: center; /* Vertically center align items in the action container */
+}
+
+.checkmark-btn, .delete-btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.checkmark-btn .bi, .delete-btn .bi {
+    font-size: 1.5rem; /* Makes the icons larger */
+}
+
+.checkmark-btn:hover, .delete-btn:hover {
+    opacity: 0.8; /* Adds a hover effect */
+}
+
+/* Additional styles for the checkmark and delete buttons */
+.checkmark-btn:hover, .delete-btn:hover {
+    opacity: 0.8; /* Adds a hover effect */
+}
+.task-description {
+    flex-grow: 1; /* Allows the description to take up available space */
+    text-align: center; /* Centers the text within its container */
+    margin-right: 10px; /* Adjust spacing as needed */
+    white-space: nowrap; /* Keeps the text on a single line */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+}
+
+#accordion {
+    width: 100%; /* Full width to center the content */
+    max-width: 600px; /* Maximum width of the accordion */
+    margin: auto; /* Center the accordion */
+}
+
+.card {
+    margin-bottom: 10px; /* Add some space between cards */
+}
+
+.card-header {
+    border-radius: 25px; /* Consistent with .task-item */
+    padding: 0; /* Remove padding if any */
+}
+
+.card-header .btn-link {
+    display: block; /* Make the button a block element */
+    width: 100%; /* Full width */
+    text-align: left; /* Align the text to the left */
+}
+
+.btn-link {
+    color: #333; /* Or any color you prefer */
+    text-decoration: none; /* Removes the underline */
+}
+
+.btn-link:hover, .btn-link:focus {
+    color: #333; /* Keeps the color the same on hover/focus */
+    text-decoration: none; /* Ensures no underline on hover/focus */
+}
+
+.list-group-item {
+    color: white;
+    /* Top and bottom padding of 15px and left and right padding of 20px */
+    font-size: 1.2rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative; /* Required for positioning the bullet */
+    /* Adjust padding to make space for the bullet */
+    padding: 15px 20px 15px 30px;
+}
+
+/* Style adjustments for the Create a Todo button */
+.btn-outline-success {
+    margin-top: 15px; /* Add some space above the button */
+    padding: 10px 20px; /* Larger padding */
+    font-size: 1.2rem; /* Larger font size */
+}
+
+/* Right margin for the My Lists and accordion container */
+.row > .col-md-8 {
+    margin-right: 15px; /* Adjust the right margin as needed */
+}
+
+.my-lists {
+    background-color: #093a7f; /* Adjust to match your desired color */
+    color: white; /* Adjust text color as needed */
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners */
+    margin-right: 250px;
+    min-width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertical centering */
+    align-items: center; /* Horizontal centering */
+    min-height: 20vh;
+}
+
+.my-lists .list-group-item {
+    background-color: transparent; /* Remove default background */
+    border: none; /* Remove borders */
+}
+
+.my-lists .list-group-item:not(:last-child) {
+    margin-bottom: 5px; /* Space between items */
+}
+
+
+.list-group-item::before {
+    content: '•'; /* Unicode character for the bullet */
+    color: white; /* Color of the bullet */
+    position: absolute;
+    left: 10px; /* Adjust as per your layout */
+    font-size: larger; /* Size of the bullet */
+}
+
+.selected-category {
+    font-weight: bold;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: flex-start; /* Align items to the start of the flex container */
+}
+
+.delete-category-btn {
+    color: #dc3545; /* Bootstrap's `$danger` color */
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+.delete-category-btn:hover {
+    color: #bd2130; /* A darker shade for hover effect */
+}
+
+@media (max-width: 768px) {
+    .my-lists {
+        width: 50vw; /* Take up half the screen on smaller devices */
+    }
+}

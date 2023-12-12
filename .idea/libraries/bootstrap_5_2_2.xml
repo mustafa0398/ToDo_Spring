@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="bootstrap-5.2.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/bootstrap-5.2.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="jar://$PROJECT_DIR$/lib/bootstrap-5.2.2.jar!/" recursive="false" />
+  </library>
+</component>
